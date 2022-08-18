@@ -1,61 +1,103 @@
-<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
-  <c-container>
-    <c-row class="justify-content-center">
-      <c-col md="8">
-        <c-card-group>
-          <c-card class="p-4">
-            <c-card-body>
-              <form cForm>
-                <h1>Login</h1>
-                <p class="text-medium-emphasis">Sign In to your account</p>
-                <c-input-group class="mb-3">
-                  <span cInputGroupText>
-                    <svg cIcon name="cilUser"></svg>
-                  </span>
-                  <input autoComplete="username" cFormControl placeholder="Username" />
-                </c-input-group>
-                <c-input-group class="mb-4">
-                  <span cInputGroupText>
-                    <svg cIcon name="cilLockLocked"></svg>
-                  </span>
-                  <input
-                    autoComplete="current-password"
-                    cFormControl
-                    placeholder="Password"
-                    type="password"
-                  />
-                </c-input-group>
-                <c-row>
-                  <c-col xs="6">
-                    <button cButton class="px-4" color="primary">
-                      Login
-                    </button>
-                  </c-col>
-                  <c-col class="text-right" xs="6">
-                    <button cButton class="px-0" color="link">
-                      Forgot password?
-                    </button>
-                  </c-col>
-                </c-row>
-              </form>
-            </c-card-body>
-          </c-card>
-          <c-card [ngStyle]="{'width.%': 44}" class="text-white bg-primary py-5">
-            <c-card-body class="text-center">
-              <div>
-                <h2>Sign up</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button [active]="true" cButton class="mt-3" color="primary" routerLink="/register">
-                  Register Now!
-                </button>
-              </div>
-            </c-card-body>
-          </c-card>
-        </c-card-group>
-      </c-col>
-    </c-row>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+	* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.login {
+  width: 320px;
+  height: 450px;
+  border: 1px solid #CCC;
+  background-image: url('./../../../../assets/img/avatars/m3.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+.login .form {
+  width: 100%;
+  height: 100%;
+  padding: 15px 25px;
+}
+.login .form h2 {
+  color: #FFF;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.login .form input {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 14px;
+  
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+.login .form input:focus {
+  border: 1px solid rgba(255,255,255,.8);
+  outline: none;
+}
+::-webkit-input-placeholder {
+    color: #DDD;
+}
+.login .form input.submit {
+  /* background: rgba(255,255,255,.9);
+   */
+   background-color:#c70202;
+  color: white;
+  font-size: 15px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.login .form button {
+  /* background: rgba(255,255,255,.9);
+   */
+  background-color:#c70202;
+   
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+  width: 100%;
+  height: 35px;
+  margin-top: 50px; 
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 14px;
+}
+h2{
+	text-shadow:2px 5px  #c70202;
+}
+</style>
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center" style="background-repeat:no-repeat; background-image:url(./../../../../assets/img/avatars/m3.jpg); background-size:cover;">
+	<c-container>
+<div class="login">
+	<div class="form">
+	  <!-- <h2>Mechanic F<i class="fa fa-search"></i>nder</h2>
+	 -->
+	 
+	 <h2><img src="./../../../../assets/img/mechanic.png" style="width:200px"></h2>
+	 <P  class="text-center" style="color:white; text-decoration-color: red;"><b>Sign In</b></P>
+    
+	 <i class="fa fa-mail"></i><input type="text" placeholder="Username">
+	 <i class="fa fa-key"></i><input type="password" placeholder="Password">
+		  
+	  <button type="submit"  class="submit text-cener">Sign In</button>
+	
+	   
+		<p class="text-center" style="color:white; font-size: small; margin-top:20px; ">
+		<a src="#" ><b>Forgot Password</b></a><br>Don't Have An Account?<a src="#" style="color: #c70202;"><b> Register</b></a></p>
+
+	</div>
+  </div>
   </c-container>
-</div>
+  </div>
