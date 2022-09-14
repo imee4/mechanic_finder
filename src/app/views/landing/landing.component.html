@@ -1,0 +1,75 @@
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<nav id="mainNavbar" class="position-relative navbar navbar-expand-lg navbar-dark  " style="background-color: #103438; border-bottom:1px solid #B51f1f;">
+  <a class="navbar-brand" routerLink="#"><img src="./../../../assets/img/avatars/mf.png" style="max-width:50%; height:auto;" ></a>
+  <button style="background-color: #B51f1f; position: absolute" class="navbar-toggler poition-absolute top-0 end-0" type="button" data-toggle="collapse"
+     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+     aria-expanded="false" aria-label="Toggle navigation"
+     (click)="toggleCollapsed()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+    
+    <ul class="navbar-nav mr-auto poition-absolute top-0 end-0" >
+      <li class="nav-item active">
+        <a class="nav-link font-effect-sofia" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#">Login</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#" tabindex="-1" aria-disabled="true">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#" tabindex="-1" aria-disabled="true">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<ngb-carousel  *ngIf="images" style="background-image:url(/assets/img/avatars/m3.jpg); background-repeat:no-repeat; background-position: center center; background-size: cover;">
+  <ng-template ngbSlide class="btn btn-danger">
+    <div class="picsum-img-wrapper text-center" >
+      <img src="/assets/img/avatars/m6.jpg" alt="Random first slide" width="600px"   height="700"  style="border-radius:10% ; border:30px solid  #103438;">
+    </div>
+    <div class="carousel-caption">
+      <a routerLink="#"><h1 style="color:#e12424; text-shadow: 2px 2px #CED3B5;"><b><i>How To Use Our Services</i></b></h1></a>
+      <!-- <p style="color:white;"><b>Nulla vitae elit libero, a pharetra augue mollis interdum.</b></p> -->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper text-center " >
+      <img src="/assets/img/avatars/m3.jpg" alt="Random second slide" width="600px" height="700" style="border-radius:10% ; border:30px solid  #103438" >
+    </div>
+    <div class="carousel-caption">
+      <a routerLink="#"><h1 style="color:#CED3B5 ; text-shadow:2px 2px #103438;"><b><i>Our Services</i></b></h1></a>
+      <!-- <p style="color:white;"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p> -->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper text-center ">
+      <img src="/assets/img/avatars/m5.jpg" alt="Random third slide" width="600px" height="700" style="border-radius:10% ; border:30px solid  #103438;">
+    </div>
+    <div class="carousel-caption"> 
+      <a routerLink="#"><h1 style="color:#103438 ;text-shadow: 2px 2px #CED3B5;"><b> <i>Engines (Videos)</i></b></h1></a>
+      <p style="color:white;"><b>.</b></p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+  <!--  -->
+  
+  

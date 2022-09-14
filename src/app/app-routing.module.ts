@@ -6,20 +6,26 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { LandingComponent } from './views/landing/landing.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'landing',
     pathMatch: 'full'
   },
   {
     path: '',
-    component: DefaultLayoutComponent,
+    component: LandingComponent,
     data: {
       title: 'Home'
     },
     children: [
+      {
+        path: 'landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },  
       {
         path: 'dashboard',
         loadChildren: () =>
