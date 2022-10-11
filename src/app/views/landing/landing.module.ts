@@ -6,11 +6,11 @@ import { LandingComponent } from './landing.component'
 
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [LandingComponent ],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    NgbCarouselModule
+    NgbCarouselModule,
   ]
 })
 export class LandingModule { }
@@ -18,4 +18,6 @@ export class LandingModule { }
 
 ///
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
  

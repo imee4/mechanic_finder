@@ -41,35 +41,16 @@
 </nav>
 
 
-<ngb-carousel  *ngIf="images" style="background-image:url(/assets/img/avatars/m33.jpg); background-repeat:no-repeat; background-position: center center; background-size: cover;" >
   <ng-template ngbSlide class="btn btn-danger">
-    <a routerLink="#"><div class="picsum-img-wrapper text-center" >
+    <div class="picsum-img-wrapper text-center" >
       <img src="/assets/img/avatars/m6.jpg" alt="Random first slide" width="600px"   height="700"  style="border-radius:10% ; border:30px solid  #103438;">
     </div>
     <div class="carousel-caption">
-      <h1 style="color:#103438; text-shadow: 2px 2px #CED3B5;"><b><i>How To Use Our Services</i></b></h1>
+      <a routerLink="#"><h1 style="color:#103438; text-shadow: 2px 2px #CED3B5;"><b><i class="elementor-heading-title elementor-size-default">How To Use Our Services</i></b></h1></a>
       <!-- <p style="color:white;"><b>Nulla vitae elit libero, a pharetra augue mollis interdum.</b></p> -->
-    </div></a>
+    </div>
   </ng-template>
-  <ng-template ngbSlide>
-    <a routerLink=""><div class="picsum-img-wrapper text-center " >
-      <img src="/assets/img/avatars/m3.jpg" alt="Random second slide" width="600px" height="700" style="border-radius:10% ; border:30px solid  #103438" >
-    </div>
-   <a routerLink=""></a> <div class="carousel-caption">
-      <h1 style="color:#103438 ; text-shadow:2px 2px #CED3B5;"><b><i>Our Services</i></b></h1>
-      <!-- <p style="color:white;"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p> -->
-    </div></a>
-  </ng-template>
-  <a routerLink="#"> <ng-template ngbSlide>
-    <div class="picsum-img-wrapper text-center ">
-      <img src="/assets/img/avatars/m5.jpg" alt="Random third slide" width="600px" height="700" style="border-radius:10% ; border:30px solid  #103438;">
-    </div>
-     <div class="carousel-caption"> 
-      <h1 style="color:#103438 ;text-shadow: 2px 2px #CED3B5;"><b> <i>Engines (Videos)</i></b></h1>
-      <p style="color:white;"><b>.</b></p>
-    </div>
-  </ng-template></a>
-</ngb-carousel>
+   
   <!--  -->
   
   

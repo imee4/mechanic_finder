@@ -7,6 +7,8 @@ import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
 import { LandingComponent } from './views/landing/landing.component';
+import { AboutComponent } from './views/landing/about/about.component';
+import { ContactComponent } from './views/landing/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -100,13 +102,27 @@ const routes: Routes = [
     }
   },
   {
+    path: 'contact',
+    component: ContactComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
     path: 'register',
     component: RegisterComponent,
     data: {
       title: 'Register Page'
     }
   },
-  {path: '**', redirectTo: 'dashboard'}
+  {path: '**', redirectTo: 'landing'}
 ];
 
 @NgModule({

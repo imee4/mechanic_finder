@@ -1,4 +1,5 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
 	* {
   box-sizing: border-box;
@@ -41,7 +42,24 @@
   border-radius: 5px;
   font-size: 14px;
 }
+.login .form textarea {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  font-size: 14px;
+}
 .login .form input:focus {
+  border: 1px solid rgba(255,255,255,.8);
+  outline: none;
+}
+.login .form textarea:focus {
   border: 1px solid rgba(255,255,255,.8);
   outline: none;
 }
@@ -57,11 +75,19 @@
   margin-top: 5px;
   font-weight: bold;
 }
+.login .form textarea.submit {
+  /* background: rgba(255,255,255,.9);
+   */
+  background-color:#c70202;
+  color: white;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
 .login .form button {
   /* background: rgba(255,255,255,.9);
    */
   background-color:#c70202;
-   
   font-size: 15px;
   margin-top: 5px;
   font-weight: bold;
@@ -117,28 +143,30 @@ h2{
       </li>
     </ul>
   </div>
-</nav>
+</nav> 
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center" style="background-repeat:no-repeat; background-image:url(./../../../../assets/img/avatars/m33.jpg); background-size:cover;">
 	<c-container>
 <div class="login">
 	<div class="form">
-	  <!-- <h2>Mechanic F<i class="fa fa-search"></i>nder</h2>
-	 -->
-	 
-	 <h2><img src="./../../../../assets/img/avatars/mf.png" style="width:300px" height="100px" ></h2>
-	 <P  class="text-center" style="color:white; text-decoration-color: red;"><b>Register</b></P>
+	  <!-- <h2>Mechanic F<i class="fa fa-search"></i>nder</h2>--> 
+	 <h2><img src="./../../../../assets/img/avatars/spanner.png" style="width:100px" height="100px" ></h2>
+	 <P  class="text-center" style="color:white; text-decoration-color: red;"><b>Contact Us</b></P>
    <i class="fa fa-mail"></i><input type="text" placeholder="Full name">
-	 <i class="fa fa-mail"></i> <input type="text" placeholder="Email">
-	 <i class="fa fa-mail"></i> <input type="text" placeholder="Phone Number"> 
+	 <i class="fa fa-mail"></i><input type="text" placeholder="Email">
+	 <i class="fa fa-mail"></i><input type="text" placeholder="Phone Number"> 
    <!-- <i class="fa fa-mail"></i><input type="text" placeholder="Address"> -->
-   <i class="fa fa-mail"></i><input type="password" placeholder="Password">
-    <p class="text-center" style="color:white; font-size: small; margin-top:20px; "><b>By Registering, You Have Agreed To<br>
-    The <a routerLink="/" style="color:#c70202"><b>Terms And Conditions</b></a> With <a routerLink="/" style="color:#c70202"><br><a routerLink="/" style="color:#c70202"></a><b>Prevacy Policy</b></a>.</b></p>
-	  <button type="submit"  class="submit txt-center">Register</button>
-    <p class="text-center" style="color:white; font-size: small; margin-top:20px; ">
-      <a src="#" >Already Registered? <a routerLink="/login" style="color: #c70202;"><b>Sign In</b></a></a></p> 
-  
+   <i class="fa fa-mail"></i><textarea row="30" type="password" placeholder="My Message Here...."></textarea>
+    <!-- <p class="text-center" style="color:white; font-size: small; margin-top:20px; "><b>By Registering, You Have Agreed To<br>
+    The <a routerLink="/" style="color:#c70202"><b>Terms And Conditions</b></a> With <a routerLink="/" style="color:#c70202"><br><a routerLink="/" style="color:#c70202"></a><b>Prevacy Policy</b></a>.</b></p> -->
+	  <button type="submit"  class="submit txt-center btn btn btn-small btn-success">Send</button>
+    <!-- <p class="text-center" style="color:white; font-size: small; margin-top:20px; "> -->
+      <!-- <a src="#" >Already Registered? <a routerLink="/login" style="color: #c70202;"><b>Sign In</b></a></a></p>  -->
 	</div>
   </div>
   </c-container>
   </div>
+ 
+   
+  <!--  -->
+  
+  
