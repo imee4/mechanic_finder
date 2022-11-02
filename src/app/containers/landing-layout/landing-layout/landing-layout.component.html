@@ -1,0 +1,127 @@
+<style>
+    /* ////////hover//////// */
+
+    ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #E12424;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #E12424;
+}
+
+ul li a:hover {
+  color: #E12424;
+  box-shadow: 0 0 5px #E12424;
+  text-shadow: 0 0 5px #E12424;
+}
+/* img */
+
+ img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #E12424;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ img:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #E12424;
+}
+
+ img:hover {
+  color: #E12424;
+  box-shadow: 0 0 50px #E12424;
+  text-shadow: 0 0 50px #E12424;
+  
+}
+
+/* //////////hober/////////// */
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<nav id="mainNavbar" class="position-relative navbar navbar-expand-lg navbar-dark  " style="background-color: #103438; border-bottom:1px solid #B51f1f;">
+  <a class="navbar-brand" routerLink="/landingx"><img src="./../../../assets/img/avatars/mf.png" style="max-width:50%; height:auto;" class="animated bounce infinite"></a>
+  <button style="background-color: #B51f1f; position: absolute" class="navbar-toggler poition-absolute top-0 end-0" type="button" data-toggle="collapse"
+     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+     aria-expanded="false" aria-label="Toggle navigation"
+     (click)="toggleCollapsed()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+    
+    <ul class="navbar-nav mr-auto poition-absolute top-0 end-0" >
+      <li class="nav-item active">
+        <a class="nav-link font-effect-sofia" routerLink="/landingx">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" tabindex="-1" aria-disabled="true">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<ngb-carousel  *ngIf="images" style="background-image:url(/assets/img/avatars/m33.jpg); background-repeat:no-repeat; background-position: center center; background-size: cover;" >
+  <ng-template ngbSlide class="btn btn-danger">
+    <a routerLink="#"><div class="picsum-img-wrapper text-center" >
+        <div class="bg-image hover-zoom">
+      <img src="/assets/img/avatars/m4.jpg" alt="Random first slide" width="520px"   height="630px"  style="border-radius:10% ;box-shadow: 0 0 50px #E12424; text-shadow: 0 0 50px #E12424;" class="w-100">
+        </div>
+    </div>
+    <div class="carousel-caption">
+      <h1 style="color:#103438; text-shadow: 2px 2px #CED3B5; box-shadow: 0 0 50px #E12424; text-shadow: 0 0 50px #E12424;"><b><i>Customer Login</i></b></h1>
+      <!-- <p style="color:white;"><b>Nulla vitae elit libero, a pharetra augue mollis interdum.</b></p> -->
+    </div></a>
+  </ng-template>
+  <ng-template ngbSlide>
+    <a routerLink=""><div class="picsum-img-wrapper text-center " >
+        <div class="bg-image hover-zoom">
+      <img src="/assets/img/avatars/m3.jpg" alt="Random second slide" width="520px" height="630px" style="border-radius:10% ;box-shadow: 0 0 50px #E12424; text-shadow: 0 0 50px #E12424;" class="w-100">
+    </div>
+    </div>
+   <a routerLink=""></a> <div class="carousel-caption">
+      <h1 style="color:#103438 ; text-shadow:2px 2px #CED3B5; box-shadow: 0 0 50px #E12424; text-shadow: 0 0 50px #E12424;"><b><i>Mechanic Login</i></b></h1>
+      <!-- <p style="color:white;"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p> -->
+    </div></a>
+  </ng-template>
+</ngb-carousel>
+  <!--  -->
+  
+  

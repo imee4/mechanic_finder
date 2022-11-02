@@ -1,4 +1,6 @@
+ 
 import { Component } from '@angular/core';
+ 
 
 @Component({
   selector: 'app-login',
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
   constructor() { }
-
+  collapsed = true;
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
+  
 }

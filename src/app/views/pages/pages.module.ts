@@ -8,12 +8,16 @@ import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
 import { ButtonModule, CardModule, FormModule, GridModule } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
+import { AboutComponent } from '../landing/about/about.component';
+import { ContactComponent } from '../landing/contact/contact.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
+    AboutComponent,
+    ContactComponent,
     Page404Component,
     Page500Component
   ],

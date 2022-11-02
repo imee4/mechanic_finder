@@ -9,4 +9,9 @@ export class RegisterComponent {
 
   constructor() { }
 
+  collapsed = true;
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
+  
 }
