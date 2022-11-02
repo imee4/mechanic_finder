@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import {
   PERFECT_SCROLLBAR_CONFIG,
   PerfectScrollbarConfigInterface,
@@ -20,7 +19,7 @@ import { AppComponent } from './app.component';
 import {
   DefaultFooterComponent,
   DefaultHeaderComponent,
-  DefaultLayoutComponent} from './containers';
+  DefaultLayoutComponent,} from './containers';
 
 import {
   AvatarModule,
@@ -41,10 +40,12 @@ import {
   SidebarModule,
   TabsModule,
   UtilitiesModule,
-} from '@coreui/angular';
+} from '@coreui/angular'; 
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MechanicLayoutComponent } from './containers/mechanic-layout/mechanic-layout.component';
+import { MechanicFooterComponent } from './containers/mechanic-layout/mechanic-footer/mechanic-footer.component'; 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -53,11 +54,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
-  DefaultLayoutComponent,
+  DefaultLayoutComponent,  
+  
 ];
 
+
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS],
+  declarations: [AppComponent, ...APP_CONTAINERS, MechanicLayoutComponent, MechanicFooterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
