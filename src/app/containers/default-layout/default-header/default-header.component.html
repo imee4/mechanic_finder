@@ -1,11 +1,13 @@
+
 <!-- <c-header class="mb-4 d-print-none" position="sticky"> -->
-<ng-container>
-  <c-container [fluid]="true">
+<ng-container >
+  <c-container [fluid]="true" style="background-color: #3399FF;">
     <button
       toggle="visible"
       cHeaderToggler
       [cSidebarToggle]="sidebarId"
       class="ps-1"
+      style="color:bisque;"
     >
       <svg cIcon
         name="cilMenu"
@@ -14,35 +16,35 @@
     </button>
     <c-header-nav class="d-none d-lg-flex me-auto">
       <c-nav-item>
-        <a cNavLink routerLink="/dashboard" routerLinkActive="active">
-          Dashboard
+        <a cNavLink routerLink="/dashboard" routerLinkActive="active" style="color:bisque;">
+        
         </a>
       </c-nav-item>
       <c-nav-item>
-        <a cNavLink routerLink="/users" routerLinkActive="active">Users</a>
+        <a cNavLink routerLink="/users" routerLinkActive="active" style="color:bisque;" ></a>
       </c-nav-item>
       <c-nav-item>
-        <a cNavLink routerLink="/settings" routerLinkActive="active">
-          Settings
+        <a cNavLink routerLink="/settings" routerLinkActive="active" style="color:bisque;">
+          
         </a>
       </c-nav-item>
     </c-header-nav>
 
-    <c-header-nav class="d-none d-lg-flex">
+    <c-header-nav class="d-none d-lg-flex ">
       <c-nav-item>
         <a routerLink="./" cNavLink>
-          <svg cIcon name="cilBell" size="lg"></svg>
+          <svg cIcon name="cilBell" size="lg" style="color:bisque;"></svg>
         </a>
       </c-nav-item>
       <c-nav-item>
-        <a routerLink="./" cNavLink>
-          <svg cIcon name="cilList" size="lg"></svg>
-        </a>
+        <!-- <a routerLink="./" cNavLink> -->
+          <!-- <svg cIcon name="cilList" size="lg"></svg> -->
+        <!-- </a> -->
       </c-nav-item>
       <c-nav-item>
-        <a routerLink="./" cNavLink>
-          <svg cIcon name="cilEnvelopeOpen" size="lg"></svg>
-        </a>
+        <!-- <a routerLink="./" cNavLink> -->
+          <!-- <svg cIcon name="cilEnvelopeOpen" size="lg" ></svg> -->
+        <!-- </a> -->
       </c-nav-item>
     </c-header-nav>
     <c-header-nav class="ms-3">
@@ -58,25 +60,25 @@
 <!--</c-header>-->
 
 <ng-template #userDropdown>
-  <c-dropdown alignment="end" variant="nav-item">
+  <c-dropdown alignment="end" variant="nav-item" >
     <button
       cButton
       color=""
       [caret]="false"
       cDropdownToggle
       class="py-0"
-    >
-      <c-avatar
+      >
+      <c-avatar 
         cTextColor="primary"
         shape="rounded-1"
         size="md"
         src="./assets/img/avatars/8.jpg"
         status="success"
-      >
+        >
       </c-avatar>
     </button>
     <ul cDropdownMenu class="pt-0 pr-5 w-auto">
-      <li>
+      <!-- <li>
         <h6 cDropdownHeader class="bg-light fw-semibold py-2">Account</h6>
       </li>
       <li>
@@ -151,11 +153,11 @@
       </li>
       <li>
         <hr cDropdownDivider/>
-      </li>
+      </li> -->
       <li>
         <a routerLink="./" cDropdownItem>
           <svg cIcon class="me-2" name="cilLockLocked"></svg>
-          Lock Account
+          Log Out
         </a>
       </li>
       <li></li>

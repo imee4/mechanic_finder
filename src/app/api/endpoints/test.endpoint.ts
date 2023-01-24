@@ -1,0 +1,33 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";   
+import { environment } from "../../../environments/environment.prod";  
+import { TestModel1 } from "../models/test1.model";
+import { UserModel } from "../models/user.model";
+@Injectable({
+    providedIn: 'root',
+})
+export class UserEndpoint {
+    baseUrl = `${environment.apiUrl}api/users`;
+
+    constructor(private readonly httpClient: HttpClient) {}
+
+    list() {
+        return this.httpClient.get<TestModel1[] >(`${this.baseUrl}`);
+    }
+
+    single(id: number) {
+        return this.httpClient.get<{ data: TestModel1 }>(`${this.baseUrl}/${id}`);
+    }
+
+    create(data) {
+        return this.httpClient.post<{ data: TestModel1 }>(`${this.baseUrl}`, data);
+    }
+         
+    delete(id: number) {
+        return this.httpClient.delete<void>(`${this.baseUrl}/${id}`);
+    }
+
+    update(id: number, data) {
+        return this.httpClient.put<{ data: TestModel1 }>(`${this.baseUrl}/${id}`, data);
+    }
+}

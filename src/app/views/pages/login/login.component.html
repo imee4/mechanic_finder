@@ -1,84 +1,6 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<style>
-	* {
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-.login {
-  width: 320px;
-  height: 450px;
-  border: 1px solid #CCC;
-  background-color: #103438;
-  background-repeat:no-repeat;
-  background-size: cover;
-  margin: 30px auto;
-  border-radius: 20px;
-}
-.login .form {
-  width: 100%;
-  height: 100%;
-  padding: 15px 25px;
-}
-.login .form h2 {
-  color: #FFF;
-  text-align: center;
-  font-weight: normal;
-  font-size: 18px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-.login .form input {
-  width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  background: rgba(255,255,255,.5);
-  border: 1px solid rgba(255,255,255,.1);
-  padding: 0 15px;
-  color: #FFF;
-  border-radius: 5px;
-  font-size: 14px;
-  
-  background-color: transparent;
-  border-bottom: 2px solid white;
-}
-.login .form input:focus {
-  border: 1px solid rgba(255,255,255,.8);
-  outline: none;
-}
-::-webkit-input-placeholder {
-    color: #DDD;
-}
-.login .form input.submit {
-  /* background: rgba(255,255,255,.9);
-   */
-   background-color:#c70202;
-  color: white;
-  font-size: 15px;
-  margin-top: 50px;
-  font-weight: bold;
-}
-.login .form button {
-  /* background: rgba(255,255,255,.9);
-   */
-  background-color:#c70202;
-   
-  font-size: 15px;
-  margin-top: 5px;
-  font-weight: bold;
-  width: 100%;
-  height: 35px;
-  margin-top: 50px; 
-  border: 1px solid rgba(255,255,255,.1);
-  padding: 0 15px;
-  color: #FFF;
-  border-radius: 5px;
-  font-size: 14px;
-}
-h2{
-	text-shadow:2px 5px  #c70202;
-}
-</style>
-<nav id="mainNavbar" class="position-relative navbar navbar-expand-lg navbar-dark  " style="background-color: #103438; border-bottom:1px solid #B51f1f;">
+
+<!-- <nav id="mainNavbar" class="position-relative navbar navbar-expand-lg navbar-dark  " style="background-color: #3399FF; border-bottom:1px solid #B51f1f; position: sticky;">
   <a class="navbar-brand" routerLink="/landing"><img src="./../../../assets/img/avatars/mf.png" style="max-width:50%; height:auto;" ></a>
   <button style="background-color: #B51f1f; position: absolute" class="navbar-toggler poition-absolute top-0 end-0" type="button" data-toggle="collapse"
      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -90,12 +12,12 @@ h2{
     
     <ul class="navbar-nav mr-auto poition-absolute top-0 end-0" >
       <li class="nav-item active">
-        <a class="nav-link font-effect-sofia" href="/landing">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link font-effect-sofia" routerLink="/landingx">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/login">Login</a>
       </li>
-      <!-- <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -105,35 +27,37 @@ h2{
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li> -->
+      </li> 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true">Sign Up</a>
+        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about" tabindex="-1" aria-disabled="true">About Us</a>
+        <a class="nav-link" routerLink="/about" tabindex="-1" aria-disabled="true">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+        <a class="nav-link" routerLink="/contact" tabindex="-1" aria-disabled="true">Contact</a>
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center" style="background-repeat:no-repeat; background-image:url(./../../../../assets/img/avatars/m33.jpg); background-size:cover;">
 	<c-container>
-<div class="login">
+<div class="login" style="padding-bottom: 45%;">
 	<div class="form">
 	  <!-- <h2>Mechanic F<i class="fa fa-search"></i>nder</h2>
 	 -->
-	 <h2><img src="./../../../../assets/img/avatars/mf.png" style="width:280px" height="95" ></h2>
+	 
+	 <h2><img src="./../../../../assets/img/avatars/spanner.png" style="width:100px" height="100px" ></h2>
 	 <P  class="text-center" style="color:white; text-decoration-color: red;"><b>Sign In</b></P>
     
 	 <i class="fa fa-mail"></i><input type="text" placeholder="Username">
 	 <i class="fa fa-key"></i><input type="password" placeholder="Password">
    
-		<p class="text-center" style="color:white; font-size: small; margin-top: 2%;">
+		<p class="text-center" style="color:white; font-size: small; margin-top: 10%;">
       <a routerLink="/" ><b>Forgot Password</b></a><br>Don't Have An Account?<a routerLink="/register" style="color: #c70202;"><b> Register</b></a></p>
 		  
-	  <button type="submit"  class="submit text-cener btn btn-small" style="margin-top: -0%;">Sign In</button>
+	  <button type="submit"  class="submit text-cener btn btn-small" style="margin-top: -0%; ">Sign In</button>
+    <p style="text-align: center;"><a routerLink="/landingx"  ><b>Back</b></a></p> 
 	
 	   
 

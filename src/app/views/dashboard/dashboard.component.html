@@ -1,14 +1,120 @@
+
+<style>
+  /* ////////hover//////// */
+ 
+div::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+/* background: #E12424; */
+transition: .5s;
+transform: scale(.9);
+z-index: -1;
+}
+
+.divc:hover{
+transform: scale(1.1);
+box-shadow: 0 0 25px #3399FF;
+}
+.divc{
+color: #3399FF;
+box-shadow: 0 0 50px #3399FF;
+text-shadow: 0 0 50px #3399FF;
+}
+.div{
+color: #3399FF;
+box-shadow: 0 0 50px #3399FF;
+text-shadow: 0 0 50px #3399FF;
+}
+
+/* //////////hober/////////// */
+</style>
 <!-- <app-widgets-dropdown></app-widgets-dropdown> -->
-<c-card class="mb-4">
+<c-card class="mb-4 div">
   <c-card-body>
-    <!-- <c-row> -->
-      <!-- <c-col sm="5">
+    <div class=" card card-chart ">
+      <div class=" card-header" style="border: 1px solid #3399FF !important"> 
+        <div class="content-wrapper container-xxl p-0" >
+          <!-- content header start -->
+          <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
+          <!-- content header end -->
+          <!-- Stats Horizontal Card -->
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12">
+              <div style="border-left: 0.25rem solid #3399FF !important" class="card ">
+                <div class="card-header divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue">
+                  <div>
+                    <h2 class="font-weight-bolder mb-0 text-center">45</h2>
+                    <h6 class="card-text text-center">Customers</h6>
+                  </div>
+                  <div class="avatar bg-light-primary p-50 m-0">
+                    <div class="avatar-content">
+                      <i _ngcontent-tix-c35="" class="icon-single-02 tim-icons" style="color:#3399FF"></i> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+              <div style="border-left: 0.25rem solid #3399FF !important" class="card">
+                <div class="card-header divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue">
+                  <div>
+                    <h2 class="font-weight-bolder mb-0 text-center">435</h2>
+                    <h6 class="card-text text-center">Mechanics</h6>
+                  </div>
+                  <div class="avatar bg-light-success p-50 m-0">
+                    <div class="avatar-content">
+                      <i _ngcontent-tix-c35="" class="icon-pencil tim-icons" style="color:#f74b69"></i> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+              <div style="border-left: 0.25rem solid #3399FF !important" class="card">
+                <div class="card-header divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue">
+                  <div>
+                    <h2 class="font-weight-bolder mb-0 text-center">45</h2>
+                    <h6 class="card-text text-center">States</h6>
+                  </div>
+                  <div class="avatar bg-light-warning p-50 m-0">
+                    <div class="avatar-content">
+                      <i _ngcontent-tix-c35="" class="icon-molecule-40 tim-icons" style="color:#3399FF"></i> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+             <div class="col-lg-3 col-sm-6 col-12">
+              <div style="border-left: 0.25rem solid #3399FF !important" class="card">
+                <div class="card-header divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue">
+                  <div>
+                    <h2 class="font-weight-bolder mb-0 text-center">12</h2>
+                    <h6 class="card-text text-center">Mechanics</h6>
+                  </div>
+                  <div class="avatar bg-light-danger p-50 m-0">
+                    <div class="avatar-content">
+                      <i _ngcontent-tix-c35="" class="icon-time-alarm tim-icons" style="color:#3399FF"></i> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+    <!-- <c-row>
+       <c-col sm="5"> 
         <h4 class="card-title mb-0" id="traffic">
           Traffic
         </h4>
         <div class="small text-medium-emphasis">January - December 2021</div>
-      </c-col> -->
-      <!-- <c-col class="d-none d-md-block" sm="7">
+      </c-col>    
+       <c-col class="d-none d-md-block" sm="7">
         <button cButton class="float-end" color="primary">
           <svg cIcon name="cilCloudDownload"></svg>
         </button>
@@ -57,18 +163,18 @@
             >Year</label>
           </c-button-group>
         </form>
-      </c-col> -->
-    <!-- </c-row> -->
-    <!-- <c-chart [data]="mainChart.data"
+      </c-col>
+    </c-row> -->
+     <!-- <c-chart [data]="mainChart.data"
              [height]="300"
              [ngStyle]="{'marginTop.px': 40}"
              [options]="mainChart.options"
-             [type]="mainChart.type">
-      Main chart
-    </c-chart> -->
+             [type]="mainChart.type"> -->
+      <!-- Main chart -->
+    <!-- </c-chart>  -->
   <!-- </c-card-body> -->
-  <!-- <c-card-footer> -->
-    <!-- <c-row class="text-center" [md]="5" [xs]="1">
+   <c-card-footer> 
+     <c-row class="text-center" [md]="5" [xs]="1">
       <c-col class="mb-sm-2 mb-0">
         <div class="text-medium-emphasis">Visits</div>
         <strong>29.703 Users (40%)</strong>
@@ -104,43 +210,43 @@
           <c-progress-bar value="40"></c-progress-bar>
         </c-progress>
       </c-col>
-    </c-row> -->
-  <!-- </c-card-footer> -->
+    </c-row> 
+  </c-card-footer>  
 <!-- </c-card> -->
 
 <!-- <app-widgets-brand [withCharts]="true"></app-widgets-brand> -->
 
 <c-row>
-  <c-col xs>
-    <c-card class="mb-4">
-      <c-card-header>Traffic {{ "&" }} Sales</c-card-header>
-      <c-card-body>
-        <c-row>
-          <c-col md="6" xl="6" xs="12">
-            <c-row>
-              <c-col sm="6">
-                <div
-                  class="border-start border-start-4 border-start-info py-1 px-3"
+  <!-- <c-col xs> -->
+    <!-- <c-card class="mt-5 pt-5" style="background-image:url('./../../../assets/img/avatars/spanner2.jpg') ;"> -->
+      <!-- <c-card-header>*** {{ "&" }} ***</c-card-header> -->
+      <!-- <c-card-body> -->
+        <!-- <c-row> -->
+          <!-- <c-col md="6" xl="6" xs="12" class="mb-5 pb-5" >  -->
+            <!-- <c-row> -->
+              <!-- <c-col sm="6"> -->
+                <!-- <div
+                  class="border-start border-start-4 border-start-info py-1 px-3 divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue;"
                 >
-                  <div class="text-medium-emphasis small">New Clients</div>
+                  <div class="small" style="color:aliceblue;">New Customer</div>
                   <div class="fs-5 fw-semibold">9,123</div>
                 </div>
               </c-col>
               <c-col sm="6">
                 <div
-                  class="border-start border-start-4 border-start-danger py-1 px-3 mb-3"
+                  class="border-start border-start-4 border-start-danger py-1 px-3 mb-3 divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue;"
                 >
-                  <div class="text-medium-emphasis small">
-                    Recurring Clients
+                <div class="small" style="color:aliceblue;">
+                    Recurring Customer
                   </div>
                   <div class="fs-5 fw-semibold">22,643</div>
                 </div>
               </c-col>
             </c-row>
 
-            <hr class="mt-0"/>
+            <hr class="mt-5"/>
 
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 mb-5 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Monday</span>
               </div>
@@ -159,7 +265,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Tuesday</span>
               </div>
@@ -178,7 +284,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Wednesday</span>
               </div>
@@ -197,7 +303,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Thursday</span>
               </div>
@@ -216,7 +322,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Friday</span>
               </div>
@@ -235,7 +341,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Saturday</span>
               </div>
@@ -254,7 +360,7 @@
                 </c-progress>
               </div>
             </div>
-            <div class="progress-group mb-4">
+            <div class="progress-group mb-4 divc">
               <div class="progress-group-prepend">
                 <span class="text-medium-emphasis small">Sunday</span>
               </div>
@@ -280,47 +386,47 @@
                 >&nbsp;</span
                 ></sup
                 >
-                <span>New clients</span>
+                <span>New Customer</span>
                 &nbsp;&nbsp;
                 <sup
                 ><span class="badge badge-pill badge-sm bg-danger"
                 >&nbsp;</span
                 ></sup
                 >
-                <span>Recurring clients</span>
+                <span>Recurring Customer</span>
               </small>
             </div>
           </c-col>
 
           <c-col md="6" xl="6" xs="12">
-            <c-row>
-              <c-col sm="6">
+            <c-row class="mb-4 pb-3">
+              <c-col sm="6" >
                 <div
-                  class="border-start border-start-4 border-start-warning py-1 px-3 mb-3"
+                  class="border-start border-start-4 border-start-warning py-1 px-3 mb-3 divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue;"
                 >
-                  <div class="text-medium-emphasis small">Page views</div>
+                <div class="small" style="color:aliceblue;">Page views</div>
                   <div class="fs-5 fw-semibold">78,623</div>
                 </div>
               </c-col>
               <c-col sm="6">
                 <div
-                  class="border-start border-start-4 border-start-success py-1 px-3 mb-3"
+                  class="border-start border-start-4 border-start-success py-1 px-3 mb-3 divc" style="background-image: linear-gradient(200deg,#3399FF, #f74b69);color:aliceblue;"
                 >
-                  <div class="text-medium-emphasis small">Organic</div>
+                <div class="small" style="color:aliceblue;">Organic</div>
                   <div class="fs-5 fw-semibold">49,123</div>
                 </div>
               </c-col>
             </c-row>
 
-            <hr class="mt-0"/>
+            <hr class="mt-0"/> -->
 
-            <div class="progress-group mb-4">
+            <!-- <div class="progress-group mb-4 divc ">
               <div class="progress-group-header">
                 <svg cIcon class="icon icon-lg me-2" name="cilUser"></svg>
-                <span>Male</span>
-                <span class="ms-auto font-semibold">43%</span>
+                <span>current Customer Requests</span>
+                <span class="ms-auto font-semibold">43</span>
               </div>
-              <div class="progress-group-bars">
+              <div class="progress-group-bars ">
                 <c-progress thin>
                   <c-progress-bar
                     color="warning"
@@ -328,12 +434,12 @@
                   ></c-progress-bar>
                 </c-progress>
               </div>
-            </div>
-            <div class="progress-group mb-5">
+            </div> -->
+            <!-- <div class="progress-group mb-5 divc">
               <div class="progress-group-header">
-                <svg cIcon class="icon icon-lg me-2" name="cilUserFemale"></svg>
-                <span>Female</span>
-                <span class="ms-auto font-semibold">37%</span>
+                <svg cIcon class="icon icon-lg me-2" name="cilUserFollow"></svg>
+                <span>Mechanic Requests</span>
+                <span class="ms-auto font-semibold">37</span>
               </div>
               <div class="progress-group-bars">
                 <c-progress thin>
@@ -343,9 +449,9 @@
                   ></c-progress-bar>
                 </c-progress>
               </div>
-            </div>
+            </div> -->
 
-            <div class="progress-group">
+            <!-- <div class="progress-group">
               <div class="progress-group-header">
                 <svg cIcon class="icon icon-lg me-2" name="cibGoogle"></svg>
                 <span>Organic Search</span>
@@ -412,8 +518,8 @@
                   ></c-progress-bar>
                 </c-progress>
               </div>
-            </div>
-            <div class="divider d-flex justify-content-center">
+            </div> -->
+            <!-- <div class="divider d-flex justify-content-center">
               <button
                 cButton
                 class="text-muted btn-link"
@@ -423,18 +529,18 @@
               >
                 <svg cIcon name="cil-options"></svg>
               </button>
-            </div>
-          </c-col>
+            </div> -->
+          <!-- </c-col>
         </c-row>
       </c-card-body>
     </c-card>
-  </c-col>
+  </c-col> -->
 </c-row>
-<c-row>
+<!-- <c-row>
   <c-col xs>
     <c-card class="mb-4">
-      <c-card-header>Users</c-card-header>
-      <c-card-body>
+      <c-card-header>Users</c-card-header> 
+       <c-card-body>
         <table
           [hover]="true"
           [responsive]="true"
@@ -463,15 +569,15 @@
                 src="{{ user.avatar }}"
                 status="{{ user.status }}"
               ></c-avatar>
-            </td>
-            <td>
+            </td> -->
+            <!-- <td>
               <div>{{ user.name }}</div>
               <div class="small text-medium-emphasis">
-                <span>{{ user.state }}</span> | Registered:
-                {{ user.registered }}
+                <span>{{ user.state }}</span> | Registe#3399FF:
+                {{ user.registe#3399FF }}
               </div>
-            </td>
-            <td class="text-center">
+            </td> -->
+            <!-- <td class="text-center">
               <svg cIcon
                 id="{{ user.country + user.name }}"
                 name="cif{{ user.country }}"
@@ -512,4 +618,4 @@
       </c-card-body>
     </c-card>
   </c-col>
-</c-row>
+</c-row> -->

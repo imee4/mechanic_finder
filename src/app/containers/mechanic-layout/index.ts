@@ -1,3 +1,3 @@
-export * from './default-footer/default-footer.component';
-export * from './default-header/default-header.component';
-export * from './default-layout.component';
+export * from './mechanic-footer/mechanic-footer.component';
+export * from './mechanic-header/mechanic-header.component';
+export * from './mechanic-layout.component';

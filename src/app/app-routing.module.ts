@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Component } from '@angular/core';
 
 import { DefaultLayoutComponent } from './containers';
 import { Page404Component } from './views/pages/page404/page404.component';
@@ -9,18 +10,42 @@ import { RegisterComponent } from './views/pages/register/register.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { AboutComponent } from './views/landing/about/about.component';
 import { ContactComponent } from './views/landing/contact/contact.component';
+// import { MechanicLayoutComponent } from './containers/mechanic-layout/mechanic-layout.component';
+// import { UserLayoutComponent } from './containers/user-layout/user-layout.component'; 
+import { LandingLayoutComponent } from './containers/landing-layout/landing-layout/landing-layout.component';
+import { MechanicLayoutComponent } from './containers/mechanic-layout/mechanic-layout.component';
+import { UserLayoutComponent } from './containers/user-layout';
+import { FeedbackComponent } from './containers/default-layout/feedback/feedback.component';
+import { StatesComponent } from './containers/default-layout/states/states.component';
+import { LocalGovtComponent } from './containers/default-layout/local-govt/local-govt.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'landingx',
     pathMatch: 'full'
   },
   {
     path: '',
-    component: LandingComponent,
+    component: LandingLayoutComponent,
     data: {
       title: 'Home'
+    }, 
+    children: [
+      {
+        path: 'landingx',
+        loadChildren: () =>
+          import('./containers/landing-layout/landing-layout.module').then((m) => m.LandingLayoutModule)
+      },  
+ 
+    ]
+  },
+
+  {
+    path: '',
+    component: DefaultLayoutComponent,
+    data: {
+      title: 'Admin'
     },
     children: [
       {
@@ -29,10 +54,37 @@ const routes: Routes = [
           import('./views/landing/landing.module').then((m) => m.LandingModule)
       },  
       {
+        path: 'feedback',
+        component: FeedbackComponent,
+        data: {
+          title: 'feed back'
+        }
+      },
+      {
+        path: 'state',
+        component: StatesComponent,
+        data: {
+          title: 'state'
+        }
+      },
+      {
+        path: 'local-govt',
+        component: LocalGovtComponent,
+        data: {
+          title: 'local-govt'
+        }
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
+      {
+        path: 'dashboardm',
+        loadChildren: () =>
+          import('./views/dashboard-m/dashboard-m.module').then((m) => m.DashboardMModule)
+      },
+    
       {
         path: 'theme',
         loadChildren: () =>
@@ -78,8 +130,56 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
+      {path: '**', redirectTo: 'landingx'}
     ]
   },
+  {
+    path: 'mechanic',
+    component: MechanicLayoutComponent,
+    data: {
+      title: 'Mechanic'
+    }, 
+    children: [
+      {
+        path: 'landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },  
+ 
+    ]
+  },
+  {
+    path: 'user',
+    component: UserLayoutComponent,
+    data: {
+      title: 'User'
+    }, 
+    children: [
+      {
+        path: 'landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },  
+ 
+    ]
+  },
+  // {
+  //   path: '',
+  //   component: UserLayoutComponent,
+  //   data: {
+  //     title: 'Home'
+  //   }, 
+  //   children: [
+  //     {
+  //       path: 'landing',
+  //       loadChildren: () =>
+  //         import('./views/landing/landing.module').then((m) => m.LandingModule)
+  //     },  
+ 
+  //   ]
+  // },
+
+
   {
     path: '404',
     component: Page404Component,
@@ -122,7 +222,14 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {path: '**', redirectTo: 'landing'}
+    {
+    path: 'landing',
+    component: LandingLayoutComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
+  {path: '**', redirectTo: 'landingx'}
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    
     "coreui-free-angular-admin-template": {
       "projectType": "application",
       "schematics": {
@@ -33,9 +34,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
+            ],  
             "styles": [
-              "src/scss/styles.scss"
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "node_modules/devextreme/dist/css/dx.light.css",
+              "src/scss/styles.scss"  
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
@@ -107,7 +110,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/scss/styles.scss"
+              "src/scss/styles.scss", 
+              "node_modules/@fortawesome/fontawesome-free/css/all.css", 
+              "../node_modules/font-awesome/scss/font-awesome.scss"
+             
             ],
             "scripts": []
           }
