@@ -1,0 +1,104 @@
+ 
+	* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.login {
+  width: 330px;
+  height: 540px;
+  border: 1px solid #CCC;
+  background-COLOR:#3399FF;
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: white;
+}
+.login .form {
+  width: 100%;
+  height: 230px;
+  padding: 10px 20px;
+}
+.login .form h2 {
+  color: #FFF;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.login .form input {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.login .form textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.login .form input:focus {
+  border: 1px solid rgba(255,255,255,.8);
+  outline: none;
+}
+.login .form textarea:focus {
+  border: 1px solid rgba(255,255,255,.8);
+  outline: none;
+}
+::-webkit-input-placeholder {
+    color: #DDD;
+}
+.login .form input.submit {
+  /* background: rgba(255,255,255,.9);
+   */
+  background-color:#c70202;
+  color: white;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.login .form textarea.submit {
+  /* background: rgba(255,255,255,.9);
+   */
+  background-color:#c70202;
+  color: white;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.login .form button {
+  /* background: rgba(255,255,255,.9);
+   */
+  background-color:#c70202;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+  width: 100%;
+  height: 35px;
+  margin-top: 0px; 
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 14px;
+}
+h2{
+	text-shadow:2px 5px  #c70202;
+}
+ 

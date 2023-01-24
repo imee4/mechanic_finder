@@ -1,84 +1,6 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<style>
-	* {
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-.login {
-  width: 330px;
-  height: 540px;
-  border: 1px solid #CCC;
-  background-COLOR:#103438;
-  background-repeat:no-repeat;
-  background-size: cover;
-  margin: 60px auto;
-  border-radius: 20px;
-  box-shadow: white;
-}
-.login .form {
-  width: 100%;
-  height: 230px;
-  padding: 10px 20px;
-}
-.login .form h2 {
-  color: #FFF;
-  text-align: center;
-  font-weight: normal;
-  font-size: 18px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-.login .form input {
-  width: 100%;
-  height: 25px;
-  margin-top: 10px;
-  background: rgba(255,255,255,.5);
-  border: 1px solid rgba(255,255,255,.1);
-  padding: 0 15px;
-  color: #FFF;
-  background-color: transparent;
-  border-bottom: 2px solid white;
-  border-radius: 5px;
-  font-size: 14px;
-}
-.login .form input:focus {
-  border: 1px solid rgba(255,255,255,.8);
-  outline: none;
-}
-::-webkit-input-placeholder {
-    color: #DDD;
-}
-.login .form input.submit {
-  /* background: rgba(255,255,255,.9);
-   */
-  background-color:#c70202;
-  color: white;
-  font-size: 15px;
-  margin-top: 5px;
-  font-weight: bold;
-}
-.login .form button {
-  /* background: rgba(255,255,255,.9);
-   */
-  background-color:#c70202;
-   
-  font-size: 15px;
-  margin-top: 5px;
-  font-weight: bold;
-  width: 100%;
-  height: 35px;
-  margin-top: 0px; 
-  border: 1px solid rgba(255,255,255,.1);
-  padding: 0 15px;
-  color: #FFF;
-  border-radius: 5px;
-  font-size: 14px;
-}
-h2{
-	text-shadow:2px 5px  #c70202;
-}
-</style>
-<nav id="mainNavbar" class="position-relative navbar navbar-expand-lg navbar-dark  " style="background-color: #103438; border-bottom:1px solid #B51f1f;">
+
+<!-- <nav id="mainNavbar" class="position-sticky navbar navbar-expand-lg navbar-dark  " style="background-color: #3399FF; border-bottom:1px solid #B51f1f; position: sticky;">
   <a class="navbar-brand" routerLink="/landing"><img src="./../../../assets/img/avatars/mf.png" style="max-width:50%; height:auto;" ></a>
   <button style="background-color: #B51f1f; position: absolute" class="navbar-toggler poition-absolute top-0 end-0" type="button" data-toggle="collapse"
      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -95,7 +17,7 @@ h2{
       <li class="nav-item">
         <a class="nav-link" routerLink="/login">Login</a>
       </li>
-      <!-- <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -105,19 +27,19 @@ h2{
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li> -->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about" tabindex="-1" aria-disabled="true">About Us</a>
+        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+        <a class="nav-link" routerLink="/about" tabindex="-1" aria-disabled="true">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" tabindex="-1" aria-disabled="true">Contact</a>
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center" style="background-repeat:no-repeat; background-image:url(./../../../../assets/img/avatars/m33.jpg); background-size:cover;">
 	<c-container>
 <div class="login">
@@ -125,7 +47,7 @@ h2{
 	  <!-- <h2>Mechanic F<i class="fa fa-search"></i>nder</h2>
 	 -->
 	 
-	 <h2><img src="./../../../../assets/img/avatars/mf.png" style="width:300px" height="100px" ></h2>
+	 <h2><img src="./../../../../assets/img/avatars/spanner.png" style="width:100px" height="100px" ></h2>
 	 <P  class="text-center" style="color:white; text-decoration-color: red;"><b>Register</b></P>
    <i class="fa fa-mail"></i><input type="text" placeholder="Full name">
 	 <i class="fa fa-mail"></i> <input type="text" placeholder="Email">
@@ -136,7 +58,8 @@ h2{
     The <a routerLink="/" style="color:#c70202"><b>Terms And Conditions</b></a> With <a routerLink="/" style="color:#c70202"><br><a routerLink="/" style="color:#c70202"></a><b>Prevacy Policy</b></a>.</b></p>
 	  <button type="submit"  class="submit txt-center">Register</button>
     <p class="text-center" style="color:white; font-size: small; margin-top:20px; ">
-      <a src="#" >Already Registered? <a routerLink="/login" style="color: #c70202;"><b>Sign In</b></a></a></p> 
+      <a src="#" >Already Registered? </a><a routerLink="/login" style="color: #c70202;"><b>Sign In</b></a><br><a routerLink="/landingx"  ><b>Back</b></a></p> 
+      <!-- <p style="text-align: center;"><a routerLink="/landingx"  ><b>Back</b></a></p>  -->
   
 	</div>
   </div>

@@ -1,61 +1,4 @@
-<style>
-  /* ////////hover//////// */
 
-  ul li a::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border-radius: 50%;
-background: #E12424;
-transition: .5s;
-transform: scale(.9);
-z-index: -1;
-}
-
-ul li a:hover::before {
-transform: scale(1.1);
-box-shadow: 0 0 15px #E12424;
-text-shadow: 0 0 50px #E12424;
-}
-
-ul li a:hover {
-color: #E12424;
-box-shadow: 0 0 50px #E12424;
-text-shadow: 0 0 500px #E12424;
-}
-/* img */
-
-img::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border-radius: 50%;
-background: #E12424;
-transition: .5s;
-transform: scale(.9);
-z-index: -1;
-}
-
-.div:hover::before {
-transform: scale(1.1);
-box-shadow: 0 0 25px #E12424;
-}
-c-sidebar-brand:hover {
-color: #E12424;
-box-shadow: 0 0 50px #E12424;
-text-shadow: 0 0 50px #E12424;
-
-}
-
-
-/* //////////hober/////////// */
-</style>
 <!--sidebar-->
 <c-sidebar
   #sidebar="cSidebar"
@@ -63,7 +6,7 @@ text-shadow: 0 0 50px #E12424;
   id="sidebar"
   visible
 >
-  <c-sidebar-brand class="divc"
+  <c-sidebar-brand 
     [brandFull]="{
       src: 'assets/img/avatars/mf.png',
       width: 240,

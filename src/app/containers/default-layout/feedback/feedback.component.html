@@ -1,0 +1,93 @@
+
+<div class=" content">
+    <div class=" row">
+      <div class=" col-12">
+        <div class=" card card-chart">
+  
+  <div class="content-wrapper container-xxl p-0">
+    <div class="content-body"> 
+      <div class="card" *ngIf="displayForm" > 
+            <section id="multiple-column-form">
+                <div class="row match-height" >
+                    <div class="col-12" > 
+                        <div class="card-body border border-primary">
+   
+                           <!-- form.component.html -->
+                           <form [formGroup]="form" (ngSubmit)="submit()">
+                            <div class="form-group">
+                              <label>Name:</label>
+                              <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+                              <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors['required']">Name is required</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label>Email:</label>
+                              <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label>Message:</label>
+                              <textarea formControlName="message" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"></textarea>
+                              <div *ngIf="submitted && f['message'].errors" class="invalid-feedback">
+                                <div *ngIf="f['message'].errors['required']">Message is required</div>
+                              </div>
+                            </div>
+                            <button class="btn btn-primary">Submit</button>
+                          </form>
+  
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Subject Form section end -->
+    <div class="card"> 
+       <div class="card-header">
+          <h4 class="float-left mb-0 font-weight-bolder">
+              <strong>Feedback Messages</strong>
+          </h4> 
+         
+
+    
+      <!-- /.box-header -->
+      <div class="card-content collapse show"> 
+              <div class="table-responsive"> 
+               
+                    <c-col class="align-self-end" class="btn btn-gradient-primary btn-sm btn-small btn-primary fa-3x" rippleEffect  (click)="showForm()" >
+                       <i class="icon-badge fa fa-email fa-flip" ></i> <span class="d-none d-sm-inline-block
+                        ">Reply</span>
+                   </c-col> 
+                 </div>
+  
+                     <dx-data-grid  style="background-color: #3399FF" class="dx-card wide-card border border-primary border-50" [dataSource]="datas"
+                      [showBorders]="true" [visible]="true" placeholder="Search..." [showColumnLines]="true"
+                      [showRowLines]="true" [rowAlternationEnabled]="true" keyExpr="id" [focusedRowEnabled]="true"
+                      [focusedRowIndex]="0" [columnAutoWidth]="true" [allowColumnReordering]="true"
+                      [allowColumnResizing]="true" [columnAutoWidth]="true" [columnHidingEnabled]=false>
+                      <dxo-paging [pageSize]="10"></dxo-paging>
+                      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+                      <dxo-filter-row [visible]="true"></dxo-filter-row> 
+                      <dxi-column dataField="email" caption="Email"></dxi-column> 
+                      <dxi-column dataField="Message" caption="Messages"></dxi-column> 
+                      <dxi-column type="buttons" fixed=true> 
+                        <dxi-button  icon="trash" text="Delete" [onClick]="delete"></dxi-button> 
+                        <dxi-button icon="repeat" text="reply" [onClick]="showForm"></dxi-button>
+                        </dxi-column>
+                  </dx-data-grid>
+             </div>
+          </div>  
+      </div>   
+      <!-- end box-body -->
+   
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ 

@@ -1,0 +1,98 @@
+
+<div class=" content">
+    <div class=" row">
+      <div class=" col-12">
+        <div class=" card card-chart">
+  
+  <div class="content-wrapper container-xxl p-0">
+    <div class="content-body"> 
+      <div class="card" *ngIf="displayForm"> 
+            <section id="multiple-column-form">
+                <div class="row match-height" >
+                    <div class="col-12" > 
+                        <div class="card-body border border-primary">
+   
+                            <form   role="form" [formGroup]="form" (ngSubmit)="processForm()" cForm > 
+                                <h4 class="float-left mb-0 font-weight-bolder">
+                                  <strong>State Form</strong>
+                              </h4>  
+                                
+                                    <div class="mb-3">
+                                        <label cLabel for="state"  
+                                        [class.text-danger]="form.get('state')!.invalid && form.get('state')!.touched"
+                                        >State Name
+                                    </label> 
+                                    <input cFormControl type="text"
+                                     style="background-color: white ;"
+                                      id="state" 
+                                     formControlName="state"/>
+                                        <span *ngIf="form.invalid && form.touched" 
+                                        [class.text-danger]="form.get('state')!.invalid && form.get('state')!.touched">State Name is Required (Max 20)</span>
+                                  
+                                    </div>
+                                     
+                                 <div class="form-actions right mb-0 pb-0" >
+                                    <button type="button" class="btn btn-danger mr-1 btn-sm shadow-sm btn-small" (click)="hideForm()">
+  
+                                        Close
+                                    </button>
+                                    
+                                    <button type="submit" class="btn btn-primary btn-sm shadow-sm btn-small" [disabled]="form.invalid">
+  
+                                       {{operation}}
+                                    </button>
+                                </div>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Subject Form section end -->
+    <div class="card"> 
+       <div class="card-header">
+          <h4 class="float-left mb-0 font-weight-bolder">
+              <strong>List of Active State</strong>
+          </h4> 
+         
+
+    
+      <!-- /.box-header -->
+      <div class="card-content collapse show"> 
+              <div class="table-responsive"> 
+               
+                    <c-col class="align-self-end" class="btn btn-gradient-primary btn-sm btn-small btn-primary fa-3x" rippleEffect (click)="addItem()">
+                       <i class="icon-badge fa fa-plus fa-flip" ></i> <span class="d-none d-sm-inline-block
+                        ">Add New
+                            State</span>
+                   </c-col> 
+                 </div>
+  
+                     <dx-data-grid  style="background-color: #3399FF" class="dx-card wide-card border border-primary border-50" [dataSource]="datas"
+                      [showBorders]="true" [visible]="true" placeholder="Search..." [showColumnLines]="true"
+                      [showRowLines]="true" [rowAlternationEnabled]="true" keyExpr="id" [focusedRowEnabled]="true"
+                      [focusedRowIndex]="0" [columnAutoWidth]="true" [allowColumnReordering]="true"
+                      [allowColumnResizing]="true" [columnAutoWidth]="true" [columnHidingEnabled]=false>
+                      <dxo-paging [pageSize]="10"></dxo-paging>
+                      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+                      <dxo-filter-row [visible]="true"></dxo-filter-row> 
+                      <dxi-column dataField="state" caption="State"></dxi-column> 
+                      <dxi-column type="buttons" fixed=true> 
+                      <dxi-button   icon="edit" text="Edit"  [onClick]="loadItem"></dxi-button> 
+           
+                    
+                        <dxi-button  icon="trash" text="Delete" [onClick]="loadItem"></dxi-button> 
+                        </dxi-column>
+                  </dx-data-grid>
+             </div>
+          </div>
+      </div>   
+      <!-- end box-body -->
+   
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ 

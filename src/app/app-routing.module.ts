@@ -13,6 +13,11 @@ import { ContactComponent } from './views/landing/contact/contact.component';
 // import { MechanicLayoutComponent } from './containers/mechanic-layout/mechanic-layout.component';
 // import { UserLayoutComponent } from './containers/user-layout/user-layout.component'; 
 import { LandingLayoutComponent } from './containers/landing-layout/landing-layout/landing-layout.component';
+import { MechanicLayoutComponent } from './containers/mechanic-layout/mechanic-layout.component';
+import { UserLayoutComponent } from './containers/user-layout';
+import { FeedbackComponent } from './containers/default-layout/feedback/feedback.component';
+import { StatesComponent } from './containers/default-layout/states/states.component';
+import { LocalGovtComponent } from './containers/default-layout/local-govt/local-govt.component';
 
 const routes: Routes = [
   {
@@ -40,7 +45,7 @@ const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Admin'
     },
     children: [
       {
@@ -49,10 +54,37 @@ const routes: Routes = [
           import('./views/landing/landing.module').then((m) => m.LandingModule)
       },  
       {
+        path: 'feedback',
+        component: FeedbackComponent,
+        data: {
+          title: 'feed back'
+        }
+      },
+      {
+        path: 'state',
+        component: StatesComponent,
+        data: {
+          title: 'state'
+        }
+      },
+      {
+        path: 'local-govt',
+        component: LocalGovtComponent,
+        data: {
+          title: 'local-govt'
+        }
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
+      {
+        path: 'dashboardm',
+        loadChildren: () =>
+          import('./views/dashboard-m/dashboard-m.module').then((m) => m.DashboardMModule)
+      },
+    
       {
         path: 'theme',
         loadChildren: () =>
@@ -101,21 +133,36 @@ const routes: Routes = [
       {path: '**', redirectTo: 'landingx'}
     ]
   },
-  // {
-  //   path: '',
-  //   component: MechanicLayoutComponent,
-  //   data: {
-  //     title: 'Home'
-  //   }, 
-  //   children: [
-  //     {
-  //       path: 'landing',
-  //       loadChildren: () =>
-  //         import('./views/landing/landing.module').then((m) => m.LandingModule)
-  //     },  
+  {
+    path: 'mechanic',
+    component: MechanicLayoutComponent,
+    data: {
+      title: 'Mechanic'
+    }, 
+    children: [
+      {
+        path: 'landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },  
  
-  //   ]
-  // },
+    ]
+  },
+  {
+    path: 'user',
+    component: UserLayoutComponent,
+    data: {
+      title: 'User'
+    }, 
+    children: [
+      {
+        path: 'landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },  
+ 
+    ]
+  },
   // {
   //   path: '',
   //   component: UserLayoutComponent,
@@ -131,6 +178,7 @@ const routes: Routes = [
  
   //   ]
   // },
+
 
   {
     path: '404',

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MechanicLayoutComponent } from './mechanic-layout.component';
+import { DashboardMComponent } from './dashboard-m.component';
 
-describe('MechanicLayoutComponent', () => {
-  let component: MechanicLayoutComponent;
-  let fixture: ComponentFixture<MechanicLayoutComponent>;
+describe('DashboardMComponent', () => {
+  let component: DashboardMComponent;
+  let fixture: ComponentFixture<DashboardMComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MechanicLayoutComponent ]
+      declarations: [ DashboardMComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MechanicLayoutComponent);
+    fixture = TestBed.createComponent(DashboardMComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
